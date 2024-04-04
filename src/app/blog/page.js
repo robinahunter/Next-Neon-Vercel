@@ -1,12 +1,18 @@
 //'use client'
 import getDomain from "@/app/lib/getDomain"
 
+//fetch caching options
+
+//force-cache
+//revalidate: n seconds
+//no-store
+
 
 async function getData() {
     //1 endpoint - API?
     const domain = getDomain()
     const endpoint = `${domain}/api/posts` // Third party API request??
-    const res = await fetch(endpoint)
+    const res = await fetch(endpoint, {next: {revalidate: 10 }}) //HTTP GET
 
     if (!res.ok) {
         throw new Error("Failed to fetch data")
@@ -17,7 +23,6 @@ async function getData() {
     }
     return res.json()
     // return {items: []}
-
 }
 
 
