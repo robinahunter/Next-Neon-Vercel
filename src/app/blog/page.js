@@ -37,5 +37,5 @@ export default async function BlogPage() {
     </main>
 }
 
-export const runtime = 'edge' // default setting is nodejs
-export const preferredRegion = "auto" //region example: iad1
+export const runtime = 'edge' // nodejs
+export const preferredRegion = "iad1"
