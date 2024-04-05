@@ -6,18 +6,19 @@ import Link from 'next/link';
 
 export function NavbarForAnon() {
     return (
-      <Navbar
+      <Navbar 
+        className='bg-black'
         fluid
         rounded
       >
         <Navbar.Brand href="/">
-          <Image alt="Jref.io Log"
+          <Image alt="logo"
             className="mr-3 h-6 sm:h-9"
             width={40}
             height={40}
             src="/favicon.ico" />
-          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            jref.io
+          <span className="self-center bg-black whitespace-nowrap text-xl font-semibold dark:text-white">
+            NNV
           </span>
         </Navbar.Brand>
         
@@ -49,27 +50,27 @@ export function NavbarForAnon() {
 export default function NavbarForUser() {
   return (
     <Navbar
-      fluid
+      flex
       rounded
     >
       <Navbar.Brand href="/">
-        <Image alt="jref.io Logo"
+        <Image alt="logo"
           className="mr-3 h-6 sm:h-9"
           width={40}
           height={40}
           src="/favicon.ico" />
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-          jref.io
+            NNV
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown
           inline
-          label={<Image alt="jref.io Logo"
+          label={<Image alt="nnv-app Logo"
           className="mr-3 w-3 h-3 sm:w-4 sm:h-4 rounded"
           width={40}
           height={40}
-          src="/favicon.ico" />}
+          src="src/app/favicon.ico" />}
         >
           <Dropdown.Item>
             <Link href='/'>Dashboard</Link> 

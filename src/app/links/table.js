@@ -8,6 +8,10 @@ const fetcher = (url) => fetch(url).then((res)=>res.json());
 
 
 
+
+
+
+
 export default function LinksHTMLTable() {
     const endpoint = "/api/links"
     const {data, error, isLoading, mutate} = useSWR(endpoint, fetcher)

@@ -3,8 +3,8 @@ import {cookies} from 'next/headers'
 
 // const secret = jose.base64url.decode(process.env.JOSE_SESSION_KEY)
 const secret = new TextEncoder().encode(process.env.JOSE_SESSION_KEY)
-const issuer = 'urn:jrefio:issuer'
-const audience = 'urn:jrefio:audience'
+const issuer = 'urn:next-neon-vercel:issuer'
+const audience = 'urn:next-neon-vercel:audience'
 const expiresAt = '2h'
 
 export const encodeUserSession = async (userId) => {
