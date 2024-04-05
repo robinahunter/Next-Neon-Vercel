@@ -36,7 +36,7 @@ export default function LinksHTMLTable() {
             </Table.Head>
         <Table.Body  className="divide-y">
             {data && data.map((link, idx)=>{
-                return <Table.Row key={`link-${idx}`} className="bg-white dark:border-gray-700 dark:bg-gray-800">
+                return <Table.Row key={`link-${idx}`} className="bg-white text-gray-500 dark:border-gray-700 dark:bg-gray-800">
                     <Table.Cell className="whitespace-nowrap font-medium text-gray-900 dark:text-white">
                         {link.id}
                     </Table.Cell>

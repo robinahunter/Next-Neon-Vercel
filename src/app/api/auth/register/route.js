@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import {registerUser} from "@/app/lib/db"
 
-import { setSessionUser } from '@/app/lib/session'
+// import { setSessionUser } from '@/app/lib/session'
 
 
 export async function POST(request) {
@@ -32,5 +32,6 @@ export async function POST(request) {
     const dbResponse = await registerUser(toSaveData)
     const responseData = dbResponse && dbResponse.data ? dbResponse.data : {}
     const responseStatus = dbResponse && dbResponse.status ? dbResponse.status : 500
+    console.log(dbResponse)
     return NextResponse.json(responseData, {status: responseStatus})
 }

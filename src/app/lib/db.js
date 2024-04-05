@@ -141,11 +141,11 @@ export async function getMinLinksAndVisits(limit, offset) {
     const lookupLimit = limit ? limit : 10
     const lookupOffset = offset ? offset : 0
     const sessionUser = await getSessionUser()
-    // return await db.select({
-    //     id: LinksTable.id,
-    //     url: LinksTable.url,
-    //     timestamp: LinksTable.createdAt,
-    // }).from(LinksTable).limit(lookupLimit).offset(lookupOffset).orderBy(desc(LinksTable.createdAt))
+    return await db.select({
+        id: LinksTable.id,
+        url: LinksTable.url,
+        timestamp: LinksTable.createdAt,
+    }).from(LinksTable).limit(lookupLimit).offset(lookupOffset).orderBy(desc(LinksTable.createdAt))
     return await db.query.LinksTable.findMany({
         limit: lookupLimit,
         offset: lookupOffset,

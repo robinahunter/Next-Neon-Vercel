@@ -45,6 +45,7 @@ export default function RegisterForm ({didSubmit}) {
             <div className="mb-2 block">
                 
                 <Label
+                    className='text-white'
                     htmlFor="username"
                     value="Pick a username"
                 />
@@ -62,6 +63,7 @@ export default function RegisterForm ({didSubmit}) {
             <div className="mb-2 block">
                 
                 <Label
+                    className='text-white'
                     htmlFor="email"
                     value="Your Email"
                 />
@@ -77,13 +79,14 @@ export default function RegisterForm ({didSubmit}) {
         <div>
             <div className="mb-2 block">
                 <Label
+                    className='text-white'
                     htmlFor="password"
                     value="Your password"
                 />
                 </div>
                 <TextInput
                 id="password"
-                placeholder='*******'
+                placeholder='enter password'
                 required
                 name='password'
                 type="password"
@@ -92,21 +95,22 @@ export default function RegisterForm ({didSubmit}) {
         <div>
             <div className="mb-2 block">
                 <Label
+                    className='text-white'
                     htmlFor="password2"
                     value="Confirm your password"
                 />
                 </div>
                 <TextInput
                 id="password2"
-                placeholder='*******'
+                placeholder='enter password'
                 required
                 name='passwordConfirm'
                 type="password"
                 />
         </div>
         
-        <Button type="submit">Register</Button>
-
+        <Button type="submit" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-500 font-medium rounded-lg text-sm px-5 py-2.5 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
+            Register</Button>
 
 
             </form>
