@@ -7,15 +7,15 @@ import Link from 'next/link';
 export function NavbarForAnon() {
     return (
       <Navbar 
-        className='bg-black'
+        className='bg-black flex-row'
         fluid
         rounded
       >
-        <Navbar.Brand href="/">
+        <Navbar.Brand className="flex items-center space-x-6 rtl:space-x-reverse" href="/">
           <Image alt="logo"
             className="mr-3 h-6 sm:h-9"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
             src="/favicon.ico" />
           <span className="self-center bg-black whitespace-nowrap text-xl font-semibold dark:text-white">
             NNV

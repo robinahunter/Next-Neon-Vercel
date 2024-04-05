@@ -15,7 +15,7 @@ export default async function RootLayout({ children }) {
   const Navbar = loggedIn ? <NavbarForUser /> : <NavbarForAnon />
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen px-10`}>
+      <body className={`${inter.className} min-h-screen px-10 bg-black`}>
         {Navbar}
         {children}
       </body>
