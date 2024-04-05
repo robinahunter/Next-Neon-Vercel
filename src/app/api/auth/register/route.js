@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import {registerUser} from "@/app/lib/db"
 
-// import { setSessionUser } from '@/app/lib/session'
+import { setSessionUser } from '@/app/lib/session'
 
 
 export async function POST(request) {
